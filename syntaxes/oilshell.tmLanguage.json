@@ -234,7 +234,7 @@
 		"function-definition": {
 			"patterns": [
 				{
-					"begin": "(?<=^|;|&|\\s)(function)\\s+([^\\s\\\\]+)(?:\\s*(\\(\\)))?",
+					"begin": "(?<=^|;|&|\\s)(proc)\\s+([^\\s\\\\]+)\\s*(\\()",
 					"beginCaptures": {
 						"1": {
 							"name": "storage.type.function.shell"
@@ -243,30 +243,35 @@
 							"name": "entity.name.function.shell"
 						},
 						"3": {
-							"name": "punctuation.definition.arguments.shell"
+							"name": "punctuation.definition.arguments.begin.shell"
 						}
 					},
-					"end": ";|&|$",
+					"end": "\\)",
 					"endCaptures": {
 						"0": {
-							"name": "punctuation.definition.function.shell"
+							"name": "punctuation.definition.arguments.end.shell"
 						}
 					},
 					"name": "meta.function.shell",
 					"patterns": [
 						{
-							"include": "$self"
+							"match": "[a-zA-Z_][a-zA-Z0-9_]*",
+							"name": "variable.parameter.function.shell"
+						},
+						{
+							"match": ",",
+							"name": "punctuation.separator.arguments.shell"
 						}
 					]
 				},
 				{
-					"begin": "(?<=^|;|&|\\s)([^\\s\\\\=]+)\\s*(\\(\\))",
+					"begin": "(?<=^|;|&|\\s)(proc)\\s+([^\\s\\\\]+)\\s*",
 					"beginCaptures": {
 						"1": {
-							"name": "entity.name.function.shell"
+							"name": "storage.type.function.shell"
 						},
 						"2": {
-							"name": "punctuation.definition.arguments.shell"
+							"name": "entity.name.function.shell"
 						}
 					},
 					"end": ";|&|$",
