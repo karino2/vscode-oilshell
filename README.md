@@ -2,7 +2,7 @@
 
 This is a VS Code extension for [Oil](http://www.oilshell.org/) shell script.
 
-Currently, almost the same as shell script mode of VSCode built-in.
+Currently, just override some part of shell script.
 
 ## Features
 

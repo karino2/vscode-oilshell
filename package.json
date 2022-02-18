@@ -19,7 +19,7 @@
         }],
         "grammars": [{
             "language": "oilshell",
-            "scopeName": "source.oilshell",
+            "scopeName": "source.shell.oilshell",
             "path": "./syntaxes/oilshell.tmLanguage.json"
         }]
     }
