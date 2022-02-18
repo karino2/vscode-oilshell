@@ -1,0 +1,26 @@
+{
+    "name": "oilshell-extension",
+    "displayName": "OilShell extension",
+    "description": "Extension for Oil Shell Script language.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.64.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "oilshell",
+            "aliases": ["Oil Shell Script", "oilshell"],
+            "extensions": [".oil"],
+            "firstLine": "^#!/.*\\boil\\b",
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "oilshell",
+            "scopeName": "source.oilshell",
+            "path": "./syntaxes/oilshell.tmLanguage.json"
+        }]
+    }
+}
