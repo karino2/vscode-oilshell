@@ -13,6 +13,9 @@
 			"include": "#control"
 		},
 		{
+			"include": "#subexpression"
+		},
+		{
 			"include": "source.shell"
 		}
 	],
@@ -69,6 +72,29 @@
 						}
 					},
 					"end": "\\n",
+					"patterns": [
+						{
+							"include": "#expression"
+						}
+					]
+				}
+			]
+		},
+		"subexpression": {
+			"patterns": [
+				{
+					"begin": "\\$\\[",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.variable.shell"
+						}
+					},
+					"end":"\\]",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.variable.shell"
+						}
+					},
 					"patterns": [
 						{
 							"include": "#expression"

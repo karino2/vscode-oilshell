@@ -29,6 +29,9 @@ const x = "123"
 var y = 456
 setvar y = x
 
+$[x > 5]
+
+
 echo """
     Multi line
     echo. $file inside.
