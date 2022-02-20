@@ -2,7 +2,7 @@
     "name": "oilshell-extension",
     "displayName": "OilShell extension",
     "description": "Extension for Oil Shell Script language.",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "engines": {
         "vscode": "^1.64.0"
     },
