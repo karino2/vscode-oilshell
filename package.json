@@ -6,7 +6,7 @@
     "license": "MIT",
     "repository": {
       "type": "git",
-      "url": "https://github.com/golang/vscode-go"
+      "url": "https://github.com/karino2/vscode-oilshell"
     },
     "version": "1.0.0",
     "engines": {
