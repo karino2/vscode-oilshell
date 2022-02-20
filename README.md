@@ -11,7 +11,7 @@ This is a VS Code extension for [Oil](http://www.oilshell.org/) shell script.
 
 ## For contributor
 
-If you want to add grammar, please also add example of that script in tests/test.ooil.
+If you want to add grammar, please also add example of that script in tests/test.oil.
 
 ## Basic concept
 
