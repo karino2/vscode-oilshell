@@ -33,8 +33,12 @@
 		"expression": {
 			"patterns": [
 				{
-					"match": "(in|not|is|true|false)",
+					"match": "(in|not|is)",
 					"name": "keyword.shell"
+				},
+				{
+					"match": "(true|false)",
+					"name": "constant.language.oil"
 				},
 				{
 					"match": "(~==|===|>=|<=|<|>|==|!=|!~~|~~|~|and|or)",
@@ -83,18 +87,13 @@
 		"subexpression": {
 			"patterns": [
 				{
-					"begin": "\\$\\[",
+					"begin": "(\\$)\\[",
 					"beginCaptures": {
-						"0": {
-							"name": "punctuation.definition.variable.shell"
+						"1": {
+							"name": "keyword.operator.subexpression.oil"
 						}
 					},
 					"end":"\\]",
-					"endCaptures": {
-						"0": {
-							"name": "punctuation.definition.variable.shell"
-						}
-					},
 					"patterns": [
 						{
 							"include": "#expression"

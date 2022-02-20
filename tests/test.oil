@@ -25,12 +25,12 @@ for(k, v in mydict) {
     
 }
 
-const x = "123"
+const x = false
 var y = 456
 setvar y = x
 
 $[x > 5]
-
+$[hoge[3]]
 
 echo """
     Multi line
