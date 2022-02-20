@@ -4,6 +4,9 @@
 	"scopeName": "source.shell.oilshell",
 	"patterns": [
 		{
+			"include": "#assign"
+		},
+		{
 			"include": "#function-definition"
 		},
 		{
@@ -47,6 +50,30 @@
 				{
 					"match": ",",
 					"name": "punctuation.comma.oil"
+				}
+			]
+		},
+		"assign": {
+			"patterns": [
+				{
+					"begin": "\\b(setvar|const|var)\\s+([_[:alpha:]][_[:alnum:]]*)\\s*(=)",
+					"beginCaptures": {
+						"1": { 
+							"name": "storage.type.oil"
+						},
+						"2": {
+							"name":"variable.other.normal.shell"
+						},
+						"3": {
+							"name":"keyword.operator.assignment.shell"
+						}
+					},
+					"end": "\\n",
+					"patterns": [
+						{
+							"include": "#expression"
+						}
+					]
 				}
 			]
 		},
