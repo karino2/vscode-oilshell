@@ -57,6 +57,19 @@
 				{
 					"match": ",",
 					"name": "punctuation.comma.oil"
+				},
+				{
+					"begin": "(%|\\$|@)\\(",
+					"beginCaptures": {
+						"1": {
+							"name": "keyword.operator.oil"
+						}
+					},
+					"patterns":[
+						{
+							"include": "$self"
+						}
+					]
 				}
 			]
 		},
@@ -90,7 +103,7 @@
 					"begin": "(\\$)\\[",
 					"beginCaptures": {
 						"1": {
-							"name": "keyword.operator.subexpression.oil"
+							"name": "keyword.operator.oil"
 						}
 					},
 					"end":"\\]",

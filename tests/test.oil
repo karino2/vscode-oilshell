@@ -25,6 +25,11 @@ for(k, v in mydict) {
     
 }
 
+for (file in @(ls ../test)) {
+    hello_proc $file >> $DEST
+}
+
+
 const x = false
 var y = 456
 setvar y = x
