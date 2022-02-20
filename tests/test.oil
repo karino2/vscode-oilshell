@@ -1,0 +1,56 @@
+#!/usr/bin/env oil
+
+ls test
+echo $FILE
+
+proc hello_proc(file, second) {
+    echo $file
+}
+
+if (x > 0 and x == "abc" and x ~ /^abc[c-d]/) {
+    echo $x
+}
+
+if test --file x && echo $x {
+    
+}
+
+# command mode
+for x in oil $num_beans 123 {
+
+}
+
+# expr mode
+for(k, v in mydict) {
+    
+}
+
+const x = "123"
+var y = 456
+
+echo """
+    Multi line
+    echo. $file inside.
+"""
+
+echo '''
+multi
+line
+'''
+
+
+
+proc noarg_proc {
+
+}
+proc noarg_proc() {
+
+}
+
+cd /tmp {
+    echo $(pwd)
+}
+
+for file in @(ls ../test) {
+    hello_proc $file >> $DEST
+}
