@@ -5,10 +5,10 @@
     "publisher": "karino2",
     "license": "MIT",
     "repository": {
-      "type": "git",
-      "url": "https://github.com/karino2/vscode-oilshell"
+        "type": "git",
+        "url": "https://github.com/karino2/vscode-oilshell"
     },
-    "version": "1.0.0",
+    "version": "1.1.0",
     "engines": {
         "vscode": "^1.64.0"
     },
@@ -16,17 +16,26 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "oilshell",
-            "aliases": ["Oil Shell Script", "oilshell"],
-            "extensions": [".oil"],
-            "firstLine": "^#!/.*\\boil\\b",
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "oilshell",
-            "scopeName": "source.shell.oilshell",
-            "path": "./syntaxes/oilshell.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "oilshell",
+                "aliases": [
+                    "Oil Shell Script",
+                    "oilshell"
+                ],
+                "extensions": [
+                    ".oil"
+                ],
+                "firstLine": "^#!/.*\\boil\\b",
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "oilshell",
+                "scopeName": "source.shell.oilshell",
+                "path": "./syntaxes/oilshell.tmLanguage.json"
+            }
+        ]
     }
 }
