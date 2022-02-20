@@ -2,18 +2,14 @@
 
 This is a VS Code extension for [Oil](http://www.oilshell.org/) shell script.
 
-Currently, just override some part of shell script.
+![oil syntax highlight](images/demo.png)
+
 
 ## Features
 
-- `"""` matching
-- proc support
+- Basic colorring support
 
-## TODO
+## For contributor
 
-- @(), $() support
-- const, var setvar support
-- regexp support
-
-![Proc syntax highlight](images/proc.png)
+If you want to add grammar, please also add example of that script in tests/test.ooil.
 

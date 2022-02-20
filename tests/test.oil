@@ -15,6 +15,18 @@ if test --file x && echo $x {
     
 }
 
+for (file in @(ls ../test)) {
+    hello_proc $file >> $DEST
+}
+
+const x = false
+var y = 456
+setvar y = x
+
+$[x > 5]
+$[hoge[3]]
+
+
 # command mode
 for x in oil $num_beans 123 {
 
@@ -25,17 +37,7 @@ for(k, v in mydict) {
     
 }
 
-for (file in @(ls ../test)) {
-    hello_proc $file >> $DEST
-}
 
-
-const x = false
-var y = 456
-setvar y = x
-
-$[x > 5]
-$[hoge[3]]
 
 echo """
     Multi line
