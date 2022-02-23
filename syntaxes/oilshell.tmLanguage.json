@@ -16,6 +16,9 @@
 			"include": "#subexpression"
 		},
 		{
+			"include": "#block"
+		},
+		{
 			"include": "source.shell"
 		}
 	],

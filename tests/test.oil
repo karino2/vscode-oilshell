@@ -9,7 +9,6 @@ proc hello_proc(file, second) {
 
 if (x > 0 and x == "abc" and x ~ /^abc[c-d]/) {
     echo $x
-    const x = false
 }
 
 if test --file x && echo $x {
@@ -18,7 +17,10 @@ if test --file x && echo $x {
 
 for (file in @(ls ../test)) {
     hello_proc $file >> $DEST
+    const a = ${file/Q.*/A.png}
 }
+
+
 
 const x = false
 var y = 456
